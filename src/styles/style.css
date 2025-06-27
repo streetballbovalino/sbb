@@ -45,13 +45,19 @@ main {
   position: relative;
 }
 
-.main-container table,
-.main-container table * {
-  font-family: Arial, sans-serif !important;
-  font-weight: bold;
+/* -------- VIDEO RESPONSIVE -------- */
+#bg-video-desktop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  display: block;
 }
 
-#bg-video {
+#bg-video-mobile {
   position: absolute;
   top: 0;
   left: 0;
@@ -60,7 +66,15 @@ main {
   object-fit: cover;
   z-index: 1;
   display: none;
-  /* Mostrato solo negli schermi piccoli */
+}
+
+@media (max-width: 900px) {
+  #bg-video-desktop {
+    display: none;
+  }
+  #bg-video-mobile {
+    display: block;
+  }
 }
 
 /* -------- MENU -------- */
