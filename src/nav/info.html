@@ -10,13 +10,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 </head>
 
-<body>    <div class="page-wrapper">
+<body>
+    <div class="page-wrapper">
         <div id="menu-placeholder"></div>
         <script>
             fetch('menu.html')
                 .then(res => res.text())
-                .then(html => { 
-                    document.getElementById('menu-placeholder').innerHTML = html; 
+                .then(html => {
+                    document.getElementById('menu-placeholder').innerHTML = html;
                     // Inizializza il menu dopo il caricamento
                     const hamburger = document.getElementById('hamburger');
                     const menu = document.getElementById('menu');
@@ -41,7 +42,8 @@
                     Campo di Basket lungomare - Bovalino (RC)
                 </a>
                 <h2>Categorie</h2>
-                <p>Le categorie elencate saranno effettivamente composte<br>solo al raggiungimento di un minimo di 5 e un massimo di 20 squadre.</p>
+                <p>Le categorie elencate saranno effettivamente composte<br>solo al raggiungimento di un minimo di 5 e
+                    un massimo di 20 squadre.</p>
                 <h3>OPEN</h3>
                 <p>Open Maschile<br>Open Femminile<br>Open Misto</p>
                 <p>Per la categoria Open Misto: almeno 1 donna in campo, 2 in squadra.</p>
@@ -50,15 +52,17 @@
                 <p>Per la categoria U14 Mista: almeno 1 ragazza in squadra.</p>
                 <h2>Iscrizione</h2>
                 <p style="text-decoration: underline;">Le iscrizioni saranno aperte dal 02/07 fino al 02/08.</p>
-                <p>Per iscrivere la tua squadra utilizza il modulo, quando<br>sarà disponibile, nella sezione dedicata.</p>
-                <p>Ci si può iscrivere anche senza avere una squadra, basta farcelo sapere<br>tramite email o canali social, ci penseremo noi.</p>
+                <p>Per iscrivere la tua squadra utilizza il modulo nella sezione dedicata.
+                </p>
+                <p>Ci si può iscrivere anche senza avere una squadra, basta farcelo sapere<br>tramite email o canali
+                    social, ci penseremo noi.</p>
                 <br>
-                <!-- <h2>Regolamento</h2> -->
-                <!-- <p> -->
-                    <!-- <a href="../assets/pdf/regolamentoStreetballBovalino2025.pdf" download> -->
-                        <!-- Consulta il regolamento completo -->
-                    <!-- </a> -->
-                <!-- </p> -->
+                <h2>Regolamento</h2>
+                <p>
+                <a href="../assets/pdf/regolamentoStreetballBovalino2025.pdf" download>
+                Consulta il regolamento completo
+                </a>
+                </p>
                 <h2>Contatti</h2>
                 <p>
                     <a href="mailto:streetballbovalino@gmail.com">streetballbovalino@gmail.com</a>
