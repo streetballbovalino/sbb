@@ -11,7 +11,6 @@ function renderCalendarTable(data, containerId, title) {
     const titleElement = document.createElement("h1");
     titleElement.textContent = title;
     titleElement.style.textAlign = "center";
-    titleElement.style.color = "#ff8400";
     titleElement.style.borderRadius = "10px";
     container.appendChild(titleElement);
 
