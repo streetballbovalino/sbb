@@ -10,6 +10,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  
 }
 
 html, body {
@@ -68,7 +69,7 @@ th {
 
 .rankings-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr; /*COLONNE DI CATEGORIE*/
     gap: 0.5rem;
     flex: 0.85;
 }
