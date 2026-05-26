@@ -1,38 +1,24 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Streetball Bovalino Classifiche 2025</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Classifiche 2025 - Streetball Bovalino</title>
+  <meta name="description" content="Classifiche del torneo Streetball Bovalino 2025. Open Maschile, Femminile, Misto, Under 16 e Under 14.">
+  <meta property="og:title" content="Classifiche - Streetball Bovalino 2025">
+  <meta property="og:description" content="Classifica aggiornata del torneo di basket 3×3 a Bovalino (RC).">
+  <meta property="og:type" content="website">
+
+  <link rel="preload" href="../assets/fonts/Grashrock.ttf" as="font" type="font/truetype" crossorigin="anonymous">
   <link rel="stylesheet" href="../styles/style.css">
   <link rel="stylesheet" href="../styles/rankings-style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 </head>
-
-<body>  <div class="page-wrapper">
+<body>
+  <div class="page-wrapper">
     <div id="menu-placeholder"></div>
-    <script>
-      fetch('menu.html')
-        .then(res => res.text())
-        .then(html => { 
-          document.getElementById('menu-placeholder').innerHTML = html; 
-          // Inizializza il menu dopo il caricamento
-          const hamburger = document.getElementById('hamburger');
-          const menu = document.getElementById('menu');
-          if (hamburger && menu) {
-            hamburger.addEventListener('click', function () {
-              menu.classList.toggle('open');
-            });
-            menu.querySelectorAll('a').forEach(link => {
-              link.addEventListener('click', () => {
-                menu.classList.remove('open');
-              });
-            });
-          }
-        });
-    </script>
+
     <div class="main-container">
       <div class="rankings">
         <h2>Classifiche</h2>
@@ -47,15 +33,12 @@
     </div>
 
     <div id="footer-placeholder"></div>
-    <script>
-      fetch('footer.html')
-        .then(res => res.text())
-        .then(html => { document.getElementById('footer-placeholder').innerHTML = html; });
-    </script>
   </div>
 
-  </div>
+  <script src="../scripts/config.js"></script>
+  <script src="../scripts/utils.js"></script>
+  <script src="../scripts/menu-loader.js"></script>
   <script src="../scripts/rankings.js"></script>
+  <script>loadFooter();</script>
 </body>
-
 </html>

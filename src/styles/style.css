@@ -278,3 +278,119 @@ main {
     text-decoration: underline;
   }
 }
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+footer {
+  background-color: #000;
+  color: #fff;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* -------- BANNER SPONSOR -------- */
+.banner {
+  height: 100px;
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  /* durata impostata via JS in proporzione al numero di sponsor */
+  animation: banner-scroll var(--banner-duration, 30s) linear infinite;
+  will-change: transform;
+}
+
+/* Pausa al passaggio del mouse — utile su desktop */
+.banner:hover .banner-content {
+  animation-play-state: paused;
+}
+
+.banner-content img {
+  height: 75px;
+  object-fit: contain;
+  margin: 0 25px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.banner-content img:hover {
+  transform: scale(1.08);
+}
+
+@keyframes banner-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); } /* -50% = una delle due copie */
+}
+
+/* Rispetta la preferenza "riduci le animazioni" */
+@media (prefers-reduced-motion: reduce) {
+  .banner-content { animation: none; }
+}
+
+/* -------- FOOTER CONTENT -------- */
+.footer-content {
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+}
+
+.social-icons a {
+  margin: 0 15px;
+  color: #fff;
+  font-size: 32px;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #f47d00;
+  transform: translateY(-3px) scale(1.1);
+}
+
+.credits p {
+  margin: 0;
+  font-size: 16px;
+  opacity: 0.9;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+/* -------- FOOTER RESPONSIVE -------- */
+@media (max-width: 768px) {
+  .banner { height: 70px; }
+  .banner-content img { height: 50px; margin: 0 18px; }
+  .footer-content { padding: 15px 25px; flex-direction: column; gap: 12px; }
+  .social-icons a { font-size: 26px; margin: 0 10px; }
+  .credits p { font-size: 13px; }
+}
+
+@media (max-width: 480px) {
+  .banner { height: 60px; }
+  .banner-content img { height: 42px; margin: 0 15px; }
+  .footer-content { padding: 12px 18px; }
+  .social-icons a { font-size: 24px; margin: 0 8px; }
+  .credits p { font-size: 12px; text-align: center; }
+}
+
+@media (min-width: 1200px) {
+  .banner { height: 120px; }
+  .banner-content img { height: 90px; margin: 0 30px; }
+  .footer-content { padding: 25px 60px; }
+  .social-icons a { font-size: 36px; margin: 0 18px; }
+  .credits p { font-size: 18px; }
+}

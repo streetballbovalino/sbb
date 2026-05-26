@@ -1,53 +1,41 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Iscrizione Gara da 3 - Streetball Bovalino</title>
-  <link rel="stylesheet" href="../styles/style.css"> 
+  <meta name="description" content="Iscriviti alla gara da 3 punti del torneo Streetball Bovalino 2025.">
+  <meta property="og:title" content="Gara da 3 - Streetball Bovalino 2025">
+  <meta property="og:description" content="Partecipa alla gara da 3 punti del torneo di basket 3×3 a Bovalino (RC).">
+  <meta property="og:type" content="website">
+
+  <link rel="preload" href="../assets/fonts/Grashrock.ttf" as="font" type="font/truetype" crossorigin="anonymous">
+  <link rel="stylesheet" href="../styles/style.css">
   <link rel="stylesheet" href="../styles/registration-style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 </head>
-
-<body>  <div class="page-wrapper">
+<body>
+  <div class="page-wrapper">
     <div id="menu-placeholder"></div>
-    <script>
-      fetch('menu.html')
-        .then(res => res.text())
-        .then(html => { 
-          document.getElementById('menu-placeholder').innerHTML = html; 
-          // Inizializza il menu dopo il caricamento
-          const hamburger = document.getElementById('hamburger');
-          const menu = document.getElementById('menu');
-          if (hamburger && menu) {
-            hamburger.addEventListener('click', function () {
-              menu.classList.toggle('open');
-            });
-            menu.querySelectorAll('a').forEach(link => {
-              link.addEventListener('click', () => {
-                menu.classList.remove('open');
-              });
-            });
-          }
-        });
-    </script>
+
     <main>
       <div class="form-container">
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSeJlv83MC5fxeusYeRts-ZVM1-cOjepxEAY4gNK9x98jkkZ3w/viewform?usp=dialog"
-          allowfullscreen>Caricamento…</iframe>
+          title="Modulo iscrizione gara da 3"
+          allowfullscreen>
+          Caricamento…
+        </iframe>
       </div>
     </main>
-    <div id="footer-placeholder"></div>
-    <script>
-      fetch('footer.html')
-        .then(res => res.text())
-        .then(html => { document.getElementById('footer-placeholder').innerHTML = html; });
-    </script>
-  </div>
-  <script src="../scripts/app.js"></script>
-</body>
 
+    <div id="footer-placeholder"></div>
+  </div>
+
+  <script src="../scripts/config.js"></script>
+  <script src="../scripts/utils.js"></script>
+  <script src="../scripts/menu-loader.js"></script>
+  <script>loadFooter();</script>
+</body>
 </html>

@@ -1,81 +1,66 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Info - Streetball Bovalino</title>
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Info - Streetball Bovalino</title>
+  <meta name="description" content="Informazioni su Streetball Bovalino 2025: date, luogo, categorie, iscrizioni e regolamento del torneo di basket 3×3.">
+  <meta property="og:title" content="Info - Streetball Bovalino 2025">
+  <meta property="og:description" content="11-12-13 Agosto 2025 • Campo Basket Lungomare, Bovalino (RC). Categorie Open e Under.">
+  <meta property="og:type" content="website">
+
+  <link rel="preload" href="../assets/fonts/Grashrock.ttf" as="font" type="font/truetype" crossorigin="anonymous">
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
 <body>
-    <div class="page-wrapper">
-        <div id="menu-placeholder"></div>
-        <script>
-            fetch('menu.html')
-                .then(res => res.text())
-                .then(html => {
-                    document.getElementById('menu-placeholder').innerHTML = html;
-                    // Inizializza il menu dopo il caricamento
-                    const hamburger = document.getElementById('hamburger');
-                    const menu = document.getElementById('menu');
-                    if (hamburger && menu) {
-                        hamburger.addEventListener('click', function () {
-                            menu.classList.toggle('open');
-                        });
-                        menu.querySelectorAll('a').forEach(link => {
-                            link.addEventListener('click', () => {
-                                menu.classList.remove('open');
-                            });
-                        });
-                    }
-                });
-        </script>
-        <main>
-            <div class="info-container">
-                <h2>Luogo e Date</h2>
-                <p>11-12-13 Agosto 2025</p>
-                <a href="https://www.google.com/maps/place/Campo+da+Basket/@38.1452719,16.1752033,112m/data=!3m1!1e3!4m9!1m2!7m1!2e1!3m5!1s0x1314dfffa0fbbb5d:0xb0aa2afffe63d084!8m2!3d38.1453267!4d16.1755124!16s%2Fg%2F11tdm39j64?entry=ttu&g_ep=EgoyMDI1MDYxNi4wIKXMDSoASAFQAw%3D%3D"
-                    target="_blank">
-                    Campo di Basket lungomare<br>Bovalino (RC)
-                </a>
-                <h2>Categorie</h2>
-                <p>Le categorie elencate saranno effettivamente composte<br>solo al raggiungimento di un minimo di 5 e
-                    un massimo di 20 squadre.</p>
-                <h3>OPEN</h3>
-                <p>Open Maschile<br>Open Femminile<br>Open Misto</p>
-                <p>Per la categoria Open Misto: almeno 1 donna in campo, 2 in squadra.</p>
-                <h3>UNDER</h3>
-                <p>Under 16 Maschile (2009-2012)<br>Under 16 Femminile (2009-2012)<br>Under 14 Mista (2011-2015)</p>
-                <p>Per la categoria U14 Mista: almeno 1 ragazza in squadra.</p>
-                <h2>Iscrizione</h2>
-                <p>Puoi iscrivere la tua squadra o iscriverti senza squadra<br>utilizzando il modulo nella sezione "ISCRIZIONE" del menu.<br><br></p>
-                <p>Se ti iscrivi singolarmente penseremo noi a creare la squadra per te<br>in base alle iscrizioni di altri giocatori nella stessa situazione.<br><br></p>
-                <br>
-                <p style="text-decoration: underline;">Le iscrizioni saranno aperte dal 02/07 fino alle 10:00 del 02/08.</p>
-                <h2>Regolamento</h2>
-                <p>
-                <a href="../assets/pdf/regolamentoStreetballBovalino2025.pdf" download>
-                Consulta il regolamento completo
-                </a>
-                </p>
-                <h2>Contatti</h2>
-                <p>
-                    <a href="mailto:streetballbovalino@gmail.com">streetballbovalino@gmail.com</a>
-                </p>
-            </div>
-        </main>
+  <div class="page-wrapper">
+    <div id="menu-placeholder"></div>
 
-        <div id="footer-placeholder"></div>
-        <script>
-            fetch('footer.html')
-                .then(res => res.text())
-                .then(html => { document.getElementById('footer-placeholder').innerHTML = html; });
-        </script>
-    </div>
-    <script src="../scripts/app.js"></script>
+    <main>
+      <div class="info-container">
+        <h2>Luogo e Date</h2>
+        <p>11-12-13 Agosto 2025</p>
+        <a href="https://www.google.com/maps/place/Campo+da+Basket/@38.1452719,16.1752033,112m/data=!3m1!1e3!4m9!1m2!7m1!2e1!3m5!1s0x1314dfffa0fbbb5d:0xb0aa2afffe63d084!8m2!3d38.1453267!4d16.1755124!16s%2Fg%2F11tdm39j64?entry=ttu&g_ep=EgoyMDI1MDYxNi4wIKXMDSoASAFQAw%3D%3D"
+          target="_blank" rel="noopener">
+          Campo di Basket lungomare<br>Bovalino (RC)
+        </a>
+
+        <h2>Categorie</h2>
+        <p>Le categorie elencate saranno effettivamente composte<br>solo al raggiungimento di un minimo di 5 e un massimo di 20 squadre.</p>
+        <h3>OPEN</h3>
+        <p>Open Maschile<br>Open Femminile<br>Open Misto</p>
+        <p>Per la categoria Open Misto: almeno 1 donna in campo, 2 in squadra.</p>
+        <h3>UNDER</h3>
+        <p>Under 16 Maschile (2009-2012)<br>Under 16 Femminile (2009-2012)<br>Under 14 Mista (2011-2015)</p>
+        <p>Per la categoria U14 Mista: almeno 1 ragazza in squadra.</p>
+
+        <h2>Iscrizione</h2>
+        <p>Puoi iscrivere la tua squadra o iscriverti senza squadra<br>utilizzando il modulo nella sezione "ISCRIZIONE" del menu.</p>
+        <p>Se ti iscrivi singolarmente penseremo noi a creare la squadra per te<br>in base alle iscrizioni di altri giocatori nella stessa situazione.</p>
+        <p style="text-decoration:underline;">Le iscrizioni saranno aperte dal 02/07 fino alle 10:00 del 02/08.</p>
+
+        <h2>Regolamento</h2>
+        <p>
+          <a href="../assets/pdf/regolamentoStreetballBovalino2025.pdf" download>
+            Consulta il regolamento completo
+          </a>
+        </p>
+
+        <h2>Contatti</h2>
+        <p>
+          <a href="mailto:streetballbovalino@gmail.com">streetballbovalino@gmail.com</a>
+        </p>
+      </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+  </div>
+
+  <script src="../scripts/config.js"></script>
+  <script src="../scripts/utils.js"></script>
+  <script src="../scripts/menu-loader.js"></script>
+  <script>loadFooter();</script>
 </body>
-
 </html>
